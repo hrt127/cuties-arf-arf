@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0A0A0A] text-[#E5E5E5] font-sans antialiased selection:bg-emerald-500/30;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.editor-container {
+  @apply max-w-3xl mx-auto px-8 py-24 min-h-screen;
+}
+
+.editor-content {
+  @apply text-xl leading-relaxed font-serif outline-none whitespace-pre-wrap;
+}
+
+.suggestion-highlight {
+  @apply bg-emerald-500/20 border-b-2 border-emerald-500/50 cursor-pointer transition-colors hover:bg-emerald-500/30;
+}
+
